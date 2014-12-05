@@ -1,0 +1,84 @@
+
+div[label="SliderData"] .control-label {
+    display:none;
+}
+
+#simple-slider-list-editor em {
+    margin-bottom: 20px;
+    display: block;
+    margin-top: -15px;
+}
+
+#simple-slider-list-editor i {
+    margin-left:5px;
+}
+
+#simple-slider-list-editor {
+    border-bottom: 1px solid #dbdbdb;
+    background:#ffffff;
+}
+
+#simple-slider-list-editor .simple-slider-list {
+    border-top: 1px solid #dbdbdb;
+    padding: 27px 0 5px 0;
+    text-align: center;
+    overflow: hidden;
+    cursor:pointer;
+    height:0;
+    position:relative
+}
+
+#simple-slider-list-editor .simple-slider-list:hover {
+    background-color:rgba(251, 251, 251, 1);
+}
+
+#simple-slider-list-editor .simple-slider-open  {
+    height:auto;
+    background-color:rgba(251, 251, 251, 1);
+}
+
+#simple-slider-list-editor .simple-slider-open  .simple-slider-list-field {
+    margin-bottom: 10px !important;
+}
+
+#simple-slider-list-editor a:hover, a:focus {
+    text-decoration: none;
+}
+
+#simple-slider-list-editor .umb-sortable-thumbnails li {
+    border: 1px solid #D8D8D8;
+}
+
+#simple-slider-list-editor .simple-slider-list-number {
+    right: 0;
+    left: 0;
+    color: #aaaaaa;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    display: block;
+    margin-top: -22px;
+    padding: 0 5px;
+}
+
+#simple-slider-list-editor .simple-slider-list-number i {
+    float:right;
+}
+
+#simple-slider-list-editor .simple-slider-list:hover .simple-slider-list-number {
+    color: #2e8aea;
+}
+
+#simple-slider-list-editor .simple-slider-list-add-row {
+    border-top: 1px solid #dbdbdb;
+    float: right;
+    padding: 5px;
+    color: #aaaaaa;
+}
+
+#simple-slider-list-editor .simple-slider-list-add-row i {
+    cursor:pointer;
+}
+
+#simple-slider-list-editor .simple-slider-list-add-row i:hover {
+    color: #2e8aea;
+}

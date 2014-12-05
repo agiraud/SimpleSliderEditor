@@ -1,0 +1,24 @@
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    dynamic sliderData = (!String.IsNullOrEmpty(Model.MacroParameters["SliderData"].ToString())) ?
+        Json.Decode((dynamic)HttpUtility.HtmlDecode(Model.MacroParameters["SliderData"].ToString())) : null;
+}
+
+@*@if (Request.Url.AbsolutePath.Contains("GetMacroResultAsHtmlForEditor")) { 
+    <img src="~/App_Plugins/SimpleSliderEditor/assets/slide1.png" style="width:100%" />
+}
+else
+{*@ 
+    <div class="slider">
+        <div class="slider-wrapper">
+            @foreach (var slide in sliderData)
+            {
+                <div class="slide">
+                    <img src="@slide.img" alt="@slide.name" />
+                    <div class="text-overlay">@slide.summary</div>
+                </div>
+            }
+        </div>
+    </div>
+@*}*@

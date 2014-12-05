@@ -1,0 +1,24 @@
+﻿{   
+    propertyEditors: [      
+		{
+            alias: "GridInjector",
+            name: "Grid Injector",
+            editor: {
+                view: "~/App_Plugins/GridInjector/GridInjector.html"
+            },
+			prevalues: {
+				fields: [{
+						label: "Stylesheet Path",
+						description: "Backend injected stylesheet file",
+						key: "cssBackendPath",
+						view: "textstring"
+				}]
+			}
+        }
+
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/GridInjector/GridInjector.controller.js'
+    ]
+}

@@ -1,0 +1,46 @@
+﻿
+.usky-editor-placeholder .slider {
+}
+
+.usky-editor-placeholder .slider-wrapper {
+    overflow:hidden;
+    position:relative;
+}
+
+.usky-editor-placeholder .slide {
+    display: inline-block;
+    margin-top: -93px;
+    margin-left: 10px;
+    float: left;
+    border: 1px solid #ffffff;
+}
+
+.usky-editor-placeholder .slide img {
+    width:auto;
+    height:100px;
+}
+
+.usky-editor-placeholder .slide .text-overlay {
+    display:none;
+}
+
+.usky-editor-placeholder .slide:first-of-type {
+    margin-top:0;
+    margin-left:0;
+}
+
+.usky-editor-placeholder .slide:first-of-type img {
+    width:100%;
+    height:auto;
+}
+
+.usky-editor-placeholder .slide:first-of-type .text-overlay {
+    display:block;
+    position:absolute;
+    top:20px;
+    background-color:#333;
+    color:#fff;
+    padding:20px;
+    width:300px;
+    right:0;
+}

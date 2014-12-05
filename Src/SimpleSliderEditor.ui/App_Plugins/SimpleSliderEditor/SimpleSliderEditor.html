@@ -1,0 +1,54 @@
+﻿<div id="simple-slider-list-editor" ng-controller="SimpleSliderEditor.controller">
+
+    <h3>Simple Slider Editor</h3>
+    <em>Here you can edit your slides</em>
+
+    <div ui-sortable="sortableOptions" ng-model="model.value">
+
+        <div class="simple-slider-list simple-slider-list-field" ng-class="{'simple-slider-open':selected == slide}" ng-click="select(slide)" ng-repeat="slide in model.value track by $index">
+
+            <span class="simple-slider-list-number">
+                {{slide.name}}
+                <i class="icon right icon-navigation"></i>
+                <i ng-click="remove($index)" class="icon right icon-delete"></i>
+            </span>
+
+            <div class="umb-mediapicker simple-slider-list-field">
+                <ul class="umb-sortable-thumbnails">
+                    <li style="width: 120px; height: 100px; overflow: hidden;">
+                        <a href ng-click="pick(slide)" class="icon-holder" ng-hide="slide.img">
+                            <i class="icon icon-add large"></i>
+                            <small>Choose...</small>
+                        </a>
+                        <img ng-src="{{slide.img}}" alt="" ng-show="slide.img">
+                        <a href class="picked-image" ng-click="slide.img = null" ng-show="slide.img"><i class="icon icon-delete"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="simple-slider-list-field">
+                <i class="icon icon-add blue" ng-show="!slide.link || !slide.link.name"></i>
+                <a href ng-click="pickContent(slide)" ng-show="!slide.link || !slide.link.name">link</a>
+                <a href ng-click="slide.link = undefined" ng-show="slide.link && slide.link.name">
+                    <i class="icon icon-delete red"></i>
+                    {{slide.link.name}}
+                </a>
+            </div>
+
+            <div class="simple-slider-list-field">
+                <input type="text" placeholder="Name" ng-model="slide.name" />
+            </div>
+
+            <div class="simple-slider-list-field">
+                <textarea type="text" placeholder="Summary" ng-model="slide.summary" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="simple-slider-list-add-row">
+        <i ng-click="add()" class="icon right icon-add"></i>
+    </div>
+
+</div>
